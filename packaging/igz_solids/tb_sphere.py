@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Sphere, domus (hemisphere) and spherical wedge.
 
-Port of ``tb_sphere.rb`` (ArkZ ``EsferaUnificadaTool``): a UV sphere built
-from latitude rings, a northern hemisphere with a flat base, or a slice
-of the sphere up to a chosen angle.
+A UV sphere built from latitude rings, a northern hemisphere with a flat
+base, or a slice of the sphere up to a chosen angle.
 """
 from __future__ import annotations
 

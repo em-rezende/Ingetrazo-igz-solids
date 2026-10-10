@@ -22,7 +22,7 @@ esta extensão no catálogo <https://github.com/ingelibre/ingetrazo-extensions>
 | Empacotador | `packaging/build_extension.ps1` (Windows) e `packaging/build_extension.py` (multi-plataforma) | Gera um `.zip` determinístico com **uma** pasta de topo `igz_solids/`. |
 | Script da Release | `packaging/publish_release.ps1` | Cria/reaproveita a Release do GitHub, envia o asset e confere o `sha256` (`-DryRun` só verifica). |
 | Notas da Release | `packaging/release_notes/v1.0.0.md` | Texto publicado na Release `v1.0.0` (é o `-Notes` padrão do script). |
-| Artefato | `dist/igz_solids.zip` | Já construído. **sha256** = `4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`. |
+| Artefato | `dist/igz_solids.zip` | Já construído. **sha256** = `200d0766db4aaa085ca43682ea0994961f4f234808fbbc0373964a1b76e8080f`. |
 | Release publicada | <https://github.com/em-rezende/Ingetrazo-igz-solids/releases/tag/v1.0.0> | `igz_solids 1.0.0` (id `409135616`), publicada em 2026-10-10; asset `igz_solids.zip` com 138 148 bytes e o sha256 acima (conferido pelo `digest` da API). |
 | Ficha do catálogo | `ingetrazo-extensions-submission/extensions/igz_solids.toml` | Copiar para `extensions/igz_solids.toml` no repositório do catálogo. |
 | Captura de tela | `ingetrazo-extensions-submission/screenshots/igz_solids.png` | Copiar para `screenshots/igz_solids.png` no repositório do catálogo (1201×750, ~68 KB). |
@@ -87,7 +87,7 @@ a tabela de conformidade, regra a regra, está em
    programas externos e não apaga arquivos.
 
 O **sha256** da ficha
-(`4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`) é a
+(`200d0766db4aaa085ca43682ea0994961f4f234808fbbc0373964a1b76e8080f`) é a
 impressão digital do `dist/igz_solids.zip`; tem de coincidir exatamente com o
 asset enviado.
 
@@ -150,6 +150,6 @@ the rule-by-rule compliance table is in
 [`ingetrazo-extensions-submission/README.md`](ingetrazo-extensions-submission/README.md).
 
 The **sha256** in the entry
-(`4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`) is the
+(`200d0766db4aaa085ca43682ea0994961f4f234808fbbc0373964a1b76e8080f`) is the
 fingerprint of `dist/igz_solids.zip` as built by the script. It **must** match
 the uploaded asset; if you rebuild, update the value.

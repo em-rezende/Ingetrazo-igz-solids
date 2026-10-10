@@ -1,10 +1,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Cone, pyramid and truncated cone/pyramid.
 
-Port of ``tb_frustrum.rb`` (ArkZ ``FrustrumTool``): a base polygon joined
-to a top polygon (a trunc), or to a single apex when the top radius is
-zero.  A cone is a many-sided shape with smooth walls; a pyramid keeps its
-facets crisp.
+A base polygon joined to a top polygon (a trunc), or to a single apex when
+the top radius is zero.  A cone is a many-sided shape with smooth walls; a
+pyramid keeps its facets crisp.
 """
 from __future__ import annotations
 

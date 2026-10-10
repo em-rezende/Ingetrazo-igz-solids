@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Regular N-sided prism.
 
-Port of ``tb_prism.rb`` (ArkZ ``PrismaTool``): a regular polygon extruded
-to a prism.  With 12 sides or more it behaves as a faceted cylinder and
-its wall seams are smoothed, exactly as in the Ruby original.
+A regular polygon extruded to a prism.  With 12 sides or more it behaves as
+a faceted cylinder and its wall seams are smoothed.
 """
 from __future__ import annotations
 

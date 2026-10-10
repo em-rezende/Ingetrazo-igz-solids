@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Geodesic sphere.
 
-Port of ``tb_geodesic.rb`` (ArkZ ``GeodesicTool``): a tetrahedron, an
-octahedron or an icosahedron whose faces are recursively subdivided
-(frequency) and projected onto a sphere of the given radius.
+A tetrahedron, an octahedron or an icosahedron whose faces are recursively
+subdivided (frequency) and projected onto a sphere of the given radius, plus
+a football (the truncated icosahedron).
 """
 from __future__ import annotations
 

@@ -5,10 +5,6 @@
 paramétricos: caixa, cápsula, cilindro/tubo, esfera, cone/pirâmide, esfera
 geodésica (incluindo uma bola de futebol), hélice, prisma e toro.
 
-É um porte de um conjunto de ferramentas Ruby do SketchUp (as ferramentas de
-sólidos *ArkZ*, mantidas para referência em `Referencias codigo Rubi/`) para a
-API de plugins em Python do IngeTrazo.
-
 Cada sólido é construído como uma **malha fechada (watertight)**, inserido
 como o **seu próprio Grupo** e gravado como **um passo de undo**.
 
@@ -40,8 +36,7 @@ como o **seu próprio Grupo** e gravado como **um passo de undo**.
   componente, o novo sólido é criado dentro dele.
 - **Watertight e com normais corretas** — a malha é orientada para fora e as
   costuras curvas ficam suaves (arestas *soft*), enquanto as tampas planas
-  mantêm os rebordos vivos: o equivalente, no IngeTrazo, ao *soft + smooth* do
-  SketchUp.
+  mantêm os rebordos vivos.
 - **Internacionalizado** — inglês (fonte), espanhol, português do Brasil e
   italiano; segue o idioma da interface do IngeTrazo.
 - **Ícones SVG com tema** para a interface escura e clara.
@@ -185,9 +180,7 @@ ficheiro se o escolhido faltar. A convenção é controlada pela constante
 ## Créditos
 
 - **IngeTrazo** — a aplicação anfitriã e a sua API de plugins.
-- As **ferramentas Ruby originais do SketchUp** (as ferramentas de sólidos
-  *ArkZ*) que esta extensão porta; ficam em `Referencias codigo Rubi/` apenas
-  como referência.
+- As **ferramentas Ruby originais**
 
 ## Licença
 

@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Solid helix (tubular spring).
 
-Port of ``tb_helix.rb`` (ArkZ ``HelixTool``): a circular tube swept along
-a helix.  Each section is oriented with the Frenet–Serret frame of the
-path, so the ring never twists.
+A circular tube swept along a helix.  Each section is oriented with the
+Frenet–Serret frame of the path, so the ring never twists.
 """
 from __future__ import annotations
 

@@ -5,9 +5,6 @@
 parametric 3D solids: box, capsule, cylinder/tube, sphere, cone/pyramid,
 geodesic sphere (including a football), helix, prism and torus.
 
-It is a port of a set of SketchUp Ruby tools (the *ArkZ* solid tools) to
-IngeTrazo's Python plugin API.
-
 Every solid is built as a **closed (watertight) mesh**, inserted as its **own
 Group**, and committed as **one undo step**.
 
@@ -38,7 +35,7 @@ Group**, and committed as **one undo step**.
   group or component, the new solid is created inside it.
 - **Watertight and correctly wound** — the mesh is oriented outward and the
   curved seams are softened (soft edges) while flat lids and annuli keep
-  crisp rims: the IngeTrazo equivalent of SketchUp's *soft + smooth*.
+  crisp rims.
 - **Internationalised** — English (source), Spanish, Brazilian Portuguese and
   Italian; it follows IngeTrazo's UI language.
 - **Themed SVG icons** for the dark and the light interface.
@@ -186,8 +183,7 @@ other file when the chosen one is missing. The convention is controlled by the
 ## Credits
 
 - **IngeTrazo** — the host application and its plugin API.
-- The original **SketchUp Ruby tools** (the *ArkZ* parametric-solid tools)
-  that this extension ports to IngeTrazo.
+- The original **Ruby tools**
 
 ## License
 

@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Parametric cylinder and tube.
 
-Port of ``tb_cylinder.rb`` (ArkZ ``CilindroTuboTool``): a circular
-profile extruded to a solid cylinder, or a hollow tube when an inner
-radius is given.
+A circular profile extruded to a solid cylinder, or a hollow tube when an
+inner radius is given.
 """
 from __future__ import annotations
 

@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Parametric torus.
 
-Port of ``tb_torus.rb`` (ArkZ ``TorusTool``): a circular spine of radius
-``major_radius`` swept by a circular section of radius ``minor_radius``.
-The torus is placed flat on the click plane (its axis along +Z).
+A circular spine of radius ``major_radius`` swept by a circular section of
+radius ``minor_radius``.  The torus is placed flat on the click plane (its
+axis along +Z).
 """
 from __future__ import annotations
 

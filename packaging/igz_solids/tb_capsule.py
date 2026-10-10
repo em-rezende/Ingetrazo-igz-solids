@@ -1,9 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Parametric capsule.
 
-Port of ``tb_capsule.rb`` (ArkZ ``CapsulaTool``): a cylindrical body
-capped by two hemispheres of the same radius.  The click point is the
-south pole; the body rises towards +Z.
+A cylindrical body capped by two hemispheres of the same radius.  The click
+point is the south pole; the body rises towards +Z.
 """
 from __future__ import annotations
 

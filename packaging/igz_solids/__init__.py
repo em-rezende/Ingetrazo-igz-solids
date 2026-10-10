@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """igz_solids — parametric solids for IngeTrazo.
 
-A toolbar extension that ports the *ArkZ* parametric-solid tools from
-SketchUp's Ruby API to IngeTrazo's Python plugin API: caixa/cunha,
-cápsula, cilindro/tubo, esfera/domus/gomo, cone/pirâmide/tronco, esfera
-geodésica, hélice sólida, prisma e toro.
+A toolbar extension that creates parametric solids: box and wedge, capsule,
+cylinder and tube, sphere / domus / spherical wedge, cone and pyramid (with
+optional truncation), geodesic sphere (including a football), solid helix,
+prism and torus.
 
 Each ``tb_*`` module (listed in ``tb_list.txt``) exposes:
 

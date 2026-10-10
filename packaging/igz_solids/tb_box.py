@@ -1,8 +1,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 """Parametric box and wedge.
 
-Port of ``tb_box.rb`` (ArkZ ``CaixaParametricaTool``): a base rectangle
-plus an extrusion, or a triangular wedge rising from one edge.
+A base rectangle plus an extrusion, or a triangular wedge rising from one
+edge.
 """
 from __future__ import annotations
 

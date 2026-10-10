@@ -199,8 +199,8 @@ def add_solid(viewport, faces, caps=(), smooth: bool = False, name=None):
 
     ``faces`` is a list of vertex loops (``QVector3D``, metres); ``caps`` are
     the indices of the *flat* faces (lids/annuli) whose rims must stay sharp;
-    ``smooth`` softens every other two-sided seam so curved surfaces read
-    smooth (IngeTrazo's equivalent of SketchUp's soft+smooth edges).
+    ``smooth`` softens every other two-sided seam so a curved surface reads as
+    one continuous face instead of a set of facets.
 
     The solid is built in a fresh :class:`~core.mesh.Mesh` and inserted with
     :class:`~core.history.InsertGroupCommand`, so its vertices never weld to
