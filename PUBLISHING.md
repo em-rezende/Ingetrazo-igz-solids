@@ -46,6 +46,13 @@ O catálogo instala **um arquivo por extensão**: um `.py`, ou um `.zip` com
 catálogo). Por isso esta extensão, que traz vários módulos, uma pasta `i18n/`
 e uma pasta de ícones, usa o formato `.zip`.
 
+A extensão cumpre as regras de
+[`docs/plugins.md`](https://github.com/ingelibre/ingetrazo/blob/main/docs/plugins.md)
+(pacote com `__init__.py`, isolamento de erros, imports relativos sem
+`sys.path`, mutações apenas pela camada de comandos e `setup(app)` da API 2);
+a tabela de conformidade, regra a regra, está em
+[`ingetrazo-extensions-submission/README.md`](ingetrazo-extensions-submission/README.md).
+
 ---
 
 ## Passos para publicar (quando autorizar)
@@ -126,6 +133,11 @@ a screenshot). To publish, once you authorise it:
    `screenshots/igz_solids.png`, then **Create pull request**.
 6. Fill in the PR template checklist and answer the prompts (the extension uses
    no network by itself, runs no external programs and deletes no files).
+
+The extension follows the plugin rules in
+[`docs/plugins.md`](https://github.com/ingelibre/ingetrazo/blob/main/docs/plugins.md);
+the rule-by-rule compliance table is in
+[`ingetrazo-extensions-submission/README.md`](ingetrazo-extensions-submission/README.md).
 
 The **sha256** in the entry
 (`4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`) is the
