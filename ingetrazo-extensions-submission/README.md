@@ -1,11 +1,11 @@
 # Submission bundle — IngeTrazo extension catalog
 
-> **Status: prepared, NOT yet published.** The GitHub repository
-> <https://github.com/em-rezende/Ingetrazo-igz-solids> and its `v1.0.0`
-> Release still have to be created and pushed. Do that only when the author
-> authorises the publication — the files here are ready for that moment.
-> A local git repository is already initialised with the `origin` remote
-> configured; nothing has been committed, tagged or pushed yet.
+> **Status: GitHub published; catalogue submission prepared (NOT submitted).**
+> The repository <https://github.com/em-rezende/Ingetrazo-igz-solids> is live
+> (`main`, tag `v1.0.0`) and its **`igz_solids 1.0.0` Release** already serves
+> the `igz_solids.zip` asset (sha256 verified). What remains is this submission
+> — the entry and the screenshot below, and the pull request —, **deliberately
+> not opened yet**, until the author authorises it.
 
 Copy these two things into the catalog repository
 (<https://github.com/ingelibre/ingetrazo-extensions>):
@@ -26,8 +26,7 @@ and fill in the template checklist.
 ## Before you submit
 
 - The `download` URL points at the **v1.0.0** GitHub Release asset
-  `igz_solids.zip`, which **does not exist yet**: publish it first (see
-  [`../PUBLISHING.md`](../PUBLISHING.md) and `packaging/publish_release.ps1`).
+  `igz_solids.zip`, which is **already published** (138 148 bytes, verified).
 - The `sha256` in the entry must match that asset byte-for-byte:
   `4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`.
   Rebuild with `packaging/build_extension.ps1` (or `packaging/build_extension.py`)

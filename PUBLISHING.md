@@ -1,12 +1,11 @@
 # Publicar no catálogo de Extensões do IngeTrazo
 
-> **Status: preparado, ainda NÃO publicado.** O código, o empacotador, a ficha
-> do catálogo e a captura de tela estão prontos, mas o repositório
-> <https://github.com/em-rezende/Ingetrazo-igz-solids>, a tag `v1.0.0` e a
-> GitHub Release com o asset `igz_solids.zip` **ainda não existem**. Um
-> repositório git local já foi inicializado com o remote `origin` configurado;
-> nada foi commitado, etiquetado ou enviado. Publique só quando o autor
-> autorizar.
+> **Status: publicado no GitHub; submissão ao catálogo preparada (NÃO submetida).**
+> O repositório <https://github.com/em-rezende/Ingetrazo-igz-solids> está
+> publicado (branch `main`), com a tag `v1.0.0` e a **Release `igz_solids 1.0.0`**
+> a servir o asset `igz_solids.zip` (sha256 conferido pelo `digest` da API).
+> Falta apenas — quando o autor autorizar — copiar a ficha e a captura para o
+> repositório do catálogo e abrir a pull request (passos 5 e 6 abaixo).
 
 Este documento (PT) e a seção em inglês mais abaixo descrevem como publicar
 esta extensão no catálogo <https://github.com/ingelibre/ingetrazo-extensions>
@@ -24,6 +23,7 @@ esta extensão no catálogo <https://github.com/ingelibre/ingetrazo-extensions>
 | Script da Release | `packaging/publish_release.ps1` | Cria/reaproveita a Release do GitHub, envia o asset e confere o `sha256` (`-DryRun` só verifica). |
 | Notas da Release | `packaging/release_notes/v1.0.0.md` | Texto publicado na Release `v1.0.0` (é o `-Notes` padrão do script). |
 | Artefato | `dist/igz_solids.zip` | Já construído. **sha256** = `4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`. |
+| Release publicada | <https://github.com/em-rezende/Ingetrazo-igz-solids/releases/tag/v1.0.0> | `igz_solids 1.0.0` (id `409135616`), publicada em 2026-10-10; asset `igz_solids.zip` com 138 148 bytes e o sha256 acima (conferido pelo `digest` da API). |
 | Ficha do catálogo | `ingetrazo-extensions-submission/extensions/igz_solids.toml` | Copiar para `extensions/igz_solids.toml` no repositório do catálogo. |
 | Captura de tela | `ingetrazo-extensions-submission/screenshots/igz_solids.png` | Copiar para `screenshots/igz_solids.png` no repositório do catálogo (1201×750, ~68 KB). |
 
@@ -56,6 +56,11 @@ a tabela de conformidade, regra a regra, está em
 ---
 
 ## Passos para publicar (quando autorizar)
+
+> Os passos **1–4 já foram executados** (commits, tag `v1.0.0`, `push` e Release
+> com o asset verificada). Faltam os passos **5–6** — a ficha e a captura no
+> repositório do catálogo e a pull request —, **propositalmente não submetidos**
+> até o autor autorizar.
 
 1. **Confirme as alterações locais e faça o commit.**
    ```powershell
@@ -104,16 +109,21 @@ asset enviado.
 
 # Publishing to the IngeTrazo extension catalog (EN)
 
-> **Status: prepared, NOT yet published.** The code, the builder, the catalog
-> entry and the screenshot are ready, but the repository
-> <https://github.com/em-rezende/Ingetrazo-igz-solids>, the `v1.0.0` tag and the
-> GitHub Release carrying `igz_solids.zip` **do not exist yet**. A local git
-> repository has been initialised with the `origin` remote configured; nothing
-> has been committed, tagged or pushed. Publish only when the author authorises
-> it.
+> **Status: published on GitHub; catalogue submission prepared (NOT submitted).**
+> The repository <https://github.com/em-rezende/Ingetrazo-igz-solids> is live
+> (`main`), with the `v1.0.0` tag and the **`igz_solids 1.0.0` Release** serving
+> the `igz_solids.zip` asset (sha256 verified through the API `digest`). All
+> that remains — once the author authorises it — is copying the entry and the
+> screenshot into the catalogue repository and opening the pull request (steps 5
+> and 6 below).
 
 Everything needed is in place (clean code, a `.zip` builder, the entry file and
-a screenshot). To publish, once you authorise it:
+a screenshot). Steps 1–4 are **already done** (commits, tag `v1.0.0`, push and
+the Release with a verified asset). Steps 5–6 — the entry and the screenshot in
+the catalogue repository, and the pull request — are **deliberately not
+submitted yet**, until the author authorises them.
+
+To publish, once you authorise it:
 
 1. Commit locally (`git add -A; git commit -m "chore: release 1.0.0 ..."`).
 2. (Only if the code changed) rebuild: `packaging\build_extension.ps1` and copy
