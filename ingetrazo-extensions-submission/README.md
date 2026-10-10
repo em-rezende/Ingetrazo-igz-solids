@@ -29,7 +29,7 @@ and fill in the template checklist.
   `igz_solids.zip`, which **does not exist yet**: publish it first (see
   [`../PUBLISHING.md`](../PUBLISHING.md) and `packaging/publish_release.ps1`).
 - The `sha256` in the entry must match that asset byte-for-byte:
-  `efd46476a5e23d2dad455a7d272758535283e474b943dc8b864c602bc0d7567a`.
+  `4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`.
   Rebuild with `packaging/build_extension.ps1` (or `packaging/build_extension.py`)
   if the code changed, and paste the value it prints. (If it is wrong, the
   catalog's automatic check tells you the right one.)

@@ -18,7 +18,7 @@ SPEC = {
     "tip": "Torus (ring) from a major radius and a section radius.",
     "fields": [
         {"key": "major_radius", "label": "Major radius (ring)", "type": "float",
-         "default": 0,75, "min": 0.001, "decimals": 3, "step": 0.1},
+         "default": 0.75, "min": 0.001, "decimals": 3, "step": 0.1},
         {"key": "minor_radius", "label": "Minor radius (section)", "type": "float",
          "default": 0.5, "min": 0.001, "decimals": 3, "step": 0.05},
         {"key": "major_segments", "label": "Ring segments", "type": "int",

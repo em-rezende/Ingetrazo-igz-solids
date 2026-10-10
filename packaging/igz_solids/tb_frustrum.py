@@ -27,7 +27,13 @@ SPEC = {
         {"key": "height", "label": "Height", "type": "float",
          "default": 2.0, "min": 0.001, "decimals": 3, "step": 0.1},
         {"key": "sides", "label": "Sides", "type": "int",
-         "default": 24, "min": 3, "max": 512},
+         "default": 24, "min": 3, "max": 512,
+         # Choosing the Type presets the sides, so a Cone (24) and a Pyramid
+         # (4) each come out right when the pulldown changes in the dialog —
+         # the geometry is the same polygon; the type only picks the count
+         # and whether the walls are smoothed.
+         "follows": {"key": "shape",
+                     "values": {"cone": 24, "pyramid": 4}}},
     ],
 }
 

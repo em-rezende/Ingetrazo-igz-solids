@@ -248,8 +248,12 @@ class ParamDialog(QDialog):
     """Generic dialog driven by a module's ``SPEC`` "fields" list.
 
     Field types: ``float`` (length in metres), ``int`` (count) and ``choice``
-    (pulldown).  A shared "Posicionamento" pulldown adds the cursor/origin
+    (pulldown).  A shared "Positioning" pulldown adds the cursor/origin
     choice to every solid.
+
+    A field may carry ``"follows": {"key": <source>, "values": {...}}`` so that
+    changing that source pulldown presets this field — e.g. the Cone/Pyramid
+    *Type* sets *Sides* to 24 or 4.
     """
 
     def __init__(self, spec: dict, parent=None, defaults: dict | None = None) -> None:
@@ -257,6 +261,7 @@ class ParamDialog(QDialog):
         self.setWindowTitle(tr(spec.get("name", "Solid")))
         self.setMinimumWidth(360)
         self._widgets: dict = {}
+        self._followers: list = []
         defaults = defaults or {}
 
         outer = QVBoxLayout(self)
@@ -274,6 +279,11 @@ class ParamDialog(QDialog):
             widget = self._make_field(effective)
             self._widgets[field["key"]] = widget
             form.addRow(QLabel(tr(field.get("label", field["key"]))), widget)
+            follow = field.get("follows")
+            if follow:
+                self._followers.append(
+                    (str(follow.get("key")), dict(follow.get("values", {})),
+                     field["key"]))
         self._place = QComboBox()
         for token, label in PLACE_LABELS:
             self._place.addItem(tr(label), token)
@@ -285,6 +295,41 @@ class ParamDialog(QDialog):
         buttons.accepted.connect(self.accept)
         buttons.rejected.connect(self.reject)
         outer.addWidget(buttons)
+
+        self._connect_followers()
+
+    def _connect_followers(self) -> None:
+        """Wire each ``follows`` link: a change in the source pulldown sets
+        the dependent field to the mapped value (a Cone resets Sides to 24,
+        a Pyramid to 4, and so on)."""
+        for source_key, _mapping, _target_key in self._followers:
+            source = self._widgets.get(source_key)
+            if isinstance(source, QComboBox):
+                source.currentIndexChanged.connect(
+                    lambda _index, key=source_key: self._apply_follow(key))
+
+    def _apply_follow(self, source_key: str) -> None:
+        for source, mapping, target_key in self._followers:
+            if source != source_key:
+                continue
+            widget = self._widgets.get(source_key)
+            target = self._widgets.get(target_key)
+            if widget is None or target is None:
+                continue
+            value = widget.currentData()
+            if value in mapping:
+                self._set_value(target, mapping[value])
+
+    @staticmethod
+    def _set_value(widget, value) -> None:
+        if isinstance(widget, QComboBox):
+            index = widget.findData(value)
+            if index >= 0:
+                widget.setCurrentIndex(index)
+        elif isinstance(widget, QSpinBox):
+            widget.setValue(int(round(float(value))))
+        else:
+            widget.setValue(float(value))
 
     def _make_field(self, field: dict):
         kind = field.get("type", "float")

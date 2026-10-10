@@ -23,7 +23,7 @@ esta extensão no catálogo <https://github.com/ingelibre/ingetrazo-extensions>
 | Empacotador | `packaging/build_extension.ps1` (Windows) e `packaging/build_extension.py` (multi-plataforma) | Gera um `.zip` determinístico com **uma** pasta de topo `igz_solids/`. |
 | Script da Release | `packaging/publish_release.ps1` | Cria/reaproveita a Release do GitHub, envia o asset e confere o `sha256` (`-DryRun` só verifica). |
 | Notas da Release | `packaging/release_notes/v1.0.0.md` | Texto publicado na Release `v1.0.0` (é o `-Notes` padrão do script). |
-| Artefato | `dist/igz_solids.zip` | Já construído. **sha256** = `efd46476a5e23d2dad455a7d272758535283e474b943dc8b864c602bc0d7567a`. |
+| Artefato | `dist/igz_solids.zip` | Já construído. **sha256** = `4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`. |
 | Ficha do catálogo | `ingetrazo-extensions-submission/extensions/igz_solids.toml` | Copiar para `extensions/igz_solids.toml` no repositório do catálogo. |
 | Captura de tela | `ingetrazo-extensions-submission/screenshots/igz_solids.png` | Copiar para `screenshots/igz_solids.png` no repositório do catálogo (1201×750, ~68 KB). |
 
@@ -75,7 +75,7 @@ e uma pasta de ícones, usa o formato `.zip`.
    programas externos e não apaga arquivos.
 
 O **sha256** da ficha
-(`efd46476a5e23d2dad455a7d272758535283e474b943dc8b864c602bc0d7567a`) é a
+(`4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`) é a
 impressão digital do `dist/igz_solids.zip`; tem de coincidir exatamente com o
 asset enviado.
 
@@ -128,6 +128,6 @@ a screenshot). To publish, once you authorise it:
    no network by itself, runs no external programs and deletes no files).
 
 The **sha256** in the entry
-(`efd46476a5e23d2dad455a7d272758535283e474b943dc8b864c602bc0d7567a`) is the
+(`4ff96b9ff2e963f33da3406063cf96201d2d07e8125911959ebcf5e2a7dbc6ef`) is the
 fingerprint of `dist/igz_solids.zip` as built by the script. It **must** match
 the uploaded asset; if you rebuild, update the value.

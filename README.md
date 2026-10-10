@@ -12,7 +12,7 @@ Every solid is built as a **closed (watertight) mesh**, inserted as its **own
 Group**, and committed as **one undo step**.
 
 - **Author:** Ezequiel M. Rezende
-- **Date:** 2026-10-08
+- **Date:** 2026-10-10
 - **Version:** 1.0.0
 - **License:** [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.html)
   (same as IngeTrazo — see [LICENSE](https://github.com/ingelibre/ingetrazo/blob/main/LICENSE))
