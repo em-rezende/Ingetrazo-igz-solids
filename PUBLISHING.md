@@ -1,11 +1,13 @@
 # Publicar no catálogo de Extensões do IngeTrazo
 
-> **Status: publicado no GitHub; submissão ao catálogo preparada (NÃO submetida).**
+> **Status: publicado no GitHub e SUBMETIDO ao catálogo (PR #69, aberta).**
 > O repositório <https://github.com/em-rezende/Ingetrazo-igz-solids> está
 > publicado (branch `main`), com a tag `v1.0.0` e a **Release `igz_solids 1.0.0`**
-> a servir o asset `igz_solids.zip` (sha256 conferido pelo `digest` da API).
-> Falta apenas — quando o autor autorizar — copiar a ficha e a captura para o
-> repositório do catálogo e abrir a pull request (passos 5 e 6 abaixo).
+> a servir o asset `igz_solids.zip` (sha256 conferido). A submissão foi enviada
+> em 2026-10-10: <https://github.com/ingelibre/ingetrazo-extensions/pull/69> —
+> o `check` automático passou. Como `igz_solids` é uma entrada **nova**, o
+> *automerge* (que só funde versões novas de extensões já listadas) não se
+> aplica: aguarda a revisão de um mantenedor.
 
 Este documento (PT) e a seção em inglês mais abaixo descrevem como publicar
 esta extensão no catálogo <https://github.com/ingelibre/ingetrazo-extensions>
@@ -57,10 +59,12 @@ a tabela de conformidade, regra a regra, está em
 
 ## Passos para publicar (quando autorizar)
 
-> Os passos **1–4 já foram executados** (commits, tag `v1.0.0`, `push` e Release
-> com o asset verificada). Faltam os passos **5–6** — a ficha e a captura no
-> repositório do catálogo e a pull request —, **propositalmente não submetidos**
-> até o autor autorizar.
+> Os passos **1–6 já foram executados**: commits, tag `v1.0.0`, `push`, Release
+> com o asset verificada, e a submissão ao catálogo — **PR #69**
+> (<https://github.com/ingelibre/ingetrazo-extensions/pull/69>), aberta em
+> 2026-10-10 com o `check` automático limpo. Como a entrada é nova, aguarda a
+> revisão de um mantenedor (o *automerge* só funde versões novas de extensões já
+> listadas).
 
 1. **Confirme as alterações locais e faça o commit.**
    ```powershell
@@ -109,21 +113,23 @@ asset enviado.
 
 # Publishing to the IngeTrazo extension catalog (EN)
 
-> **Status: published on GitHub; catalogue submission prepared (NOT submitted).**
+> **Status: published on GitHub and SUBMITTED to the catalogue (PR #69, open).**
 > The repository <https://github.com/em-rezende/Ingetrazo-igz-solids> is live
 > (`main`), with the `v1.0.0` tag and the **`igz_solids 1.0.0` Release** serving
-> the `igz_solids.zip` asset (sha256 verified through the API `digest`). All
-> that remains — once the author authorises it — is copying the entry and the
-> screenshot into the catalogue repository and opening the pull request (steps 5
-> and 6 below).
+> the `igz_solids.zip` asset (sha256 verified). The submission went in on
+> 2026-10-10: <https://github.com/ingelibre/ingetrazo-extensions/pull/69> — the
+> automatic `check` passed. As `igz_solids` is a **new** entry, the *automerge*
+> rule (which only takes new versions of extensions already listed) does not
+> apply: it awaits a maintainer's review.
 
-Everything needed is in place (clean code, a `.zip` builder, the entry file and
-a screenshot). Steps 1–4 are **already done** (commits, tag `v1.0.0`, push and
-the Release with a verified asset). Steps 5–6 — the entry and the screenshot in
-the catalogue repository, and the pull request — are **deliberately not
-submitted yet**, until the author authorises them.
+Everything is done: steps 1–6 (commits, tag `v1.0.0`, push, the Release with a
+verified asset, and the catalogue submission — **PR #69**,
+<https://github.com/ingelibre/ingetrazo-extensions/pull/69>, opened on
+2026-10-10 with a clean `check`). As the entry is new, it awaits a maintainer's
+review (the *automerge* rule only takes new versions of extensions already
+listed).
 
-To publish, once you authorise it:
+For reference, the steps were:
 
 1. Commit locally (`git add -A; git commit -m "chore: release 1.0.0 ..."`).
 2. (Only if the code changed) rebuild: `packaging\build_extension.ps1` and copy

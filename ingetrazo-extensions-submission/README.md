@@ -1,11 +1,15 @@
 # Submission bundle — IngeTrazo extension catalog
 
-> **Status: GitHub published; catalogue submission prepared (NOT submitted).**
-> The repository <https://github.com/em-rezende/Ingetrazo-igz-solids> is live
-> (`main`, tag `v1.0.0`) and its **`igz_solids 1.0.0` Release** already serves
-> the `igz_solids.zip` asset (sha256 verified). What remains is this submission
-> — the entry and the screenshot below, and the pull request —, **deliberately
-> not opened yet**, until the author authorises it.
+> **Status: SUBMITTED — pull request #69 is open.** The repository
+> <https://github.com/em-rezende/Ingetrazo-igz-solids> is live (`main`, tag
+> `v1.0.0`) with the **`igz_solids 1.0.0` Release** serving the `igz_solids.zip`
+> asset (sha256 verified), and the entry + screenshot below were sent to the
+> catalogue on 2026-10-10 as
+> <https://github.com/ingelibre/ingetrazo-extensions/pull/69> — the automatic
+> `check` passed. It is a **new** entry, so the `automerge` rule (which only
+> takes new versions of extensions already listed) does not apply: a maintainer
+> merges it. It will show as «Community» until someone records its sha256 in
+> `reviewed.toml`.
 
 Copy these two things into the catalog repository
 (<https://github.com/ingelibre/ingetrazo-extensions>):
