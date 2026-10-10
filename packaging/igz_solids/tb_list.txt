@@ -1,0 +1,12 @@
+# igz_solids — toolbar buttons, in order.
+# One module name per line (relative to this package). Lines starting
+# with '#' and blank lines are ignored.
+tb_box
+tb_capsule
+tb_cylinder
+tb_sphere
+tb_frustrum
+tb_geodesic
+tb_helix
+tb_prism
+tb_torus
