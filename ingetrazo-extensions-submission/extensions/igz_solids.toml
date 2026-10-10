@@ -18,7 +18,7 @@ download = "https://github.com/em-rezende/Ingetrazo-igz-solids/releases/download
 sha256 = "9bc82a17b203d43aa770a19d573bdb197797cdeb3ab49cc11e2c2f5a7ac7a4c8"
 ingetrazo = "0.5.7"
 tags = ["drawing", "structures", "productivity"]
-screenshot = "igz_solids.png"
+screenshot = "igz-solids.png"
 
 [name]
 es = "Sólidos paramétricos"

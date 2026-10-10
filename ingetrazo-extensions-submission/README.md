@@ -13,11 +13,11 @@ Copy these two things into the catalog repository
 | From here | To the catalog repository |
 |---|---|
 | `extensions/igz_solids.toml` | `extensions/igz_solids.toml` |
-| `screenshots/igz_solids.png` | `screenshots/igz_solids.png` |
+| `screenshots/igz-solids.png` | `screenshots/igz-solids.png` |
 
 The screenshot shows the **Solids** toolbar, the Geodesic Sphere dialog and
-some solids built with them (1201×750 px, ~68 KB) and must keep the file name
-`igz_solids.png` — that is the name in the entry's `screenshot` field.
+some solids built with them (1200×750 px, ~96 KB) and must keep the file name
+`igz-solids.png` — that is the name in the entry's `screenshot` field.
 
 Then open the pull request (browser: *Add file ▸ Create new file* and
 *Add file ▸ Upload files* → **Propose changes** → **Create pull request**)
@@ -26,7 +26,7 @@ and fill in the template checklist.
 ## Before you submit
 
 - The `download` URL points at the **v1.0.0** GitHub Release asset
-  `igz_solids.zip`, which is **already published** (138 148 bytes, verified).
+  `igz_solids.zip`, which is **already published** (138 030 bytes, verified).
 - The `sha256` in the entry must match that asset byte-for-byte:
   `9bc82a17b203d43aa770a19d573bdb197797cdeb3ab49cc11e2c2f5a7ac7a4c8`.
   Rebuild with `packaging/build_extension.ps1` (or `packaging/build_extension.py`)

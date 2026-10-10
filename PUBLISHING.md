@@ -23,9 +23,9 @@ esta extensão no catálogo <https://github.com/ingelibre/ingetrazo-extensions>
 | Script da Release | `packaging/publish_release.ps1` | Cria/reaproveita a Release do GitHub, envia o asset e confere o `sha256` (`-DryRun` só verifica). |
 | Notas da Release | `packaging/release_notes/v1.0.0.md` | Texto publicado na Release `v1.0.0` (é o `-Notes` padrão do script). |
 | Artefato | `dist/igz_solids.zip` | Já construído. **sha256** = `9bc82a17b203d43aa770a19d573bdb197797cdeb3ab49cc11e2c2f5a7ac7a4c8`. |
-| Release publicada | <https://github.com/em-rezende/Ingetrazo-igz-solids/releases/tag/v1.0.0> | `igz_solids 1.0.0` (id `409135616`), publicada em 2026-10-10; asset `igz_solids.zip` com 138 148 bytes e o sha256 acima (conferido pelo `digest` da API). |
+| Release publicada | <https://github.com/em-rezende/Ingetrazo-igz-solids/releases/tag/v1.0.0> | `igz_solids 1.0.0` (id `409135616`), publicada em 2026-10-10; asset `igz_solids.zip` com 138 030 bytes e o sha256 acima (conferido pelo `digest` da API). |
 | Ficha do catálogo | `ingetrazo-extensions-submission/extensions/igz_solids.toml` | Copiar para `extensions/igz_solids.toml` no repositório do catálogo. |
-| Captura de tela | `ingetrazo-extensions-submission/screenshots/igz_solids.png` | Copiar para `screenshots/igz_solids.png` no repositório do catálogo (1201×750, ~68 KB). |
+| Captura de tela | `ingetrazo-extensions-submission/screenshots/igz-solids.png` | Copiar para `screenshots/igz-solids.png` no repositório do catálogo (1200×750, ~96 KB). |
 
 O `.zip` contém exatamente uma pasta de topo:
 
@@ -80,8 +80,8 @@ a tabela de conformidade, regra a regra, está em
 5. Em <https://github.com/ingelibre/ingetrazo-extensions>, copie
    `ingetrazo-extensions-submission/extensions/igz_solids.toml` para
    `extensions/igz_solids.toml` e
-   `ingetrazo-extensions-submission/screenshots/igz_solids.png` para
-   `screenshots/igz_solids.png` (no browser: *Add file ▸ Create new file* e
+   `ingetrazo-extensions-submission/screenshots/igz-solids.png` para
+   `screenshots/igz-solids.png` (no browser: *Add file ▸ Create new file* e
    *Add file ▸ Upload files*), e abra a pull request.
 6. Preencha o checklist do template. A extensão não usa rede, não executa
    programas externos e não apaga arquivos.
@@ -99,7 +99,7 @@ asset enviado.
   `productivity`, `rendering`, `analysis`, `import-export`, `terrain`,
   `education`, `other`. Esta ficha usa `drawing`, `structures` e
   `productivity`.
-- **Captura de tela**: 1201×750 px (~68 KB). A sugestão do catálogo é
+- **Captura de tela**: 1200×750 px (~96 KB). A sugestão do catálogo é
   ~1200×750 e o limite é 600 KB, então há folga.
 - **Uma ficha por extensão**: se preferir separar em várias entradas (por
   família de sólidos), cada uma precisaria do seu próprio arquivo baixável
@@ -139,8 +139,8 @@ To publish, once you authorise it:
 5. In <https://github.com/ingelibre/ingetrazo-extensions>, copy
    `ingetrazo-extensions-submission/extensions/igz_solids.toml` to
    `extensions/igz_solids.toml` and
-   `ingetrazo-extensions-submission/screenshots/igz_solids.png` to
-   `screenshots/igz_solids.png`, then **Create pull request**.
+   `ingetrazo-extensions-submission/screenshots/igz-solids.png` to
+   `screenshots/igz-solids.png`, then **Create pull request**.
 6. Fill in the PR template checklist and answer the prompts (the extension uses
    no network by itself, runs no external programs and deletes no files).
 
