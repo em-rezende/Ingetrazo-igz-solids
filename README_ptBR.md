@@ -147,9 +147,10 @@ Cada `tb_*.py` expõe duas coisas:
   entradas da barra em `ACTIONS`, para que um único módulo possa alimentar
   vários botões.
 - `build(params, origin)` — a geometria pura, devolvendo
-  `(faces, cap_indices, smooth)`, onde `faces` é uma lista de laços de
-  vértices (`QVector3D`, metros), `cap_indices` indexa as faces planas cujos
-  rebordos ficam vivos, e `smooth` pede costuras suaves.
+  `(faces, cap_indices, smooth)`, onde `faces` é uma lista de faces — um laço
+  de vértices (`QVector3D`, metros) ou um par `(laço, [furos])` para uma face
+  plana com furos (o anel de um tubo) — `cap_indices` indexa as faces planas
+  cujos rebordos ficam vivos, e `smooth` pede costuras suaves.
 
 Para adicionar: cria `tb_myosolid.py`, acrescenta o nome do módulo numa linha
 do `tb_list.txt` e reinicia o IngeTrazo.

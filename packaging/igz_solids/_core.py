@@ -183,24 +183,32 @@ def circle_points(origin, radius: float, segments: int, z: float = 0.0):
 
 
 def solid_segments(faces):
-    """``[(a, b), ...]`` wireframe edges of a list of vertex loops."""
+    """``[(a, b), ...]`` wireframe edges of a list of faces.
+
+    A face is a vertex loop or a ``(loop, [hole_loops])`` pair; the outer
+    boundary and every hole contribute their edges to the preview.
+    """
     segs = []
-    for loop in faces:
-        n = len(loop)
-        for i in range(n):
-            a, b = loop[i], loop[(i + 1) % n]
-            if (a - b).lengthSquared() > 1e-12:
-                segs.append((a, b))
+    for face in faces:
+        loops = (face[0], *face[1]) if isinstance(face, tuple) else (face,)
+        for loop in loops:
+            n = len(loop)
+            for i in range(n):
+                a, b = loop[i], loop[(i + 1) % n]
+                if (a - b).lengthSquared() > 1e-12:
+                    segs.append((a, b))
     return segs
 
 
 def add_solid(viewport, faces, caps=(), smooth: bool = False, name=None):
     """Create a watertight solid as its OWN GROUP, in one undo step.
 
-    ``faces`` is a list of vertex loops (``QVector3D``, metres); ``caps`` are
-    the indices of the *flat* faces (lids/annuli) whose rims must stay sharp;
-    ``smooth`` softens every other two-sided seam so a curved surface reads as
-    one continuous face instead of a set of facets.
+    ``faces`` is a list of faces — each a vertex loop (``QVector3D``, metres)
+    or a ``(loop, [hole_loops])`` pair for a planar face with holes (a tube's
+    annulus) — and ``caps`` are the indices of the *flat* faces (lids/annuli)
+    whose rims must stay sharp; ``smooth`` softens every other two-sided seam
+    so a curved surface reads as one continuous face instead of a set of
+    facets.
 
     The solid is built in a fresh :class:`~core.mesh.Mesh` and inserted with
     :class:`~core.history.InsertGroupCommand`, so its vertices never weld to
@@ -213,8 +221,12 @@ def add_solid(viewport, faces, caps=(), smooth: bool = False, name=None):
     from core.orient import orient_outward
 
     mesh = Mesh()
-    for loop in faces:
-        mesh.add_face(loop)
+    for face in faces:
+        if isinstance(face, tuple):         # (outer_loop, [hole_loops])
+            outer, holes = face
+            mesh.add_face(outer, list(holes) or None)
+        else:
+            mesh.add_face(face)
     # The orientation pass only flips a mesh it can prove is closed, and the
     # solid's own mesh is exactly that — independent of the rest of the model.
     try:

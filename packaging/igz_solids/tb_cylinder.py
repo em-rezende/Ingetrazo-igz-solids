@@ -60,12 +60,13 @@ def build(params, origin):
             faces.append([inner0[i], inner1[i], inner1[j], inner0[j]])
 
         cap_start = len(faces)
-        for i in range(segments):
-            j = (i + 1) % segments
-            faces.append([outer1[i], outer1[j], inner1[j], inner1[i]])
-        for i in range(segments):
-            j = (i + 1) % segments
-            faces.append([outer0[i], inner0[i], inner0[j], outer0[j]])
+        # The top and bottom rings are ONE planar face each, with the bore as
+        # a hole.  A flat annulus has no radial seams to show, so each rim
+        # reads as two clean circles instead of a fan of coplanar edges (the
+        # segments' radial edges are not even created, and earcut fills the
+        # ring between the two loops).
+        faces.append((list(outer1), [list(reversed(inner1))]))
+        faces.append((list(reversed(outer0)), [list(inner0)]))
 
         caps = list(range(cap_start, len(faces)))
         return faces, caps, True

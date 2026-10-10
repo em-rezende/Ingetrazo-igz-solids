@@ -28,7 +28,7 @@ and fill in the template checklist.
 - The `download` URL points at the **v1.0.0** GitHub Release asset
   `igz_solids.zip`, which is **already published** (138 148 bytes, verified).
 - The `sha256` in the entry must match that asset byte-for-byte:
-  `200d0766db4aaa085ca43682ea0994961f4f234808fbbc0373964a1b76e8080f`.
+  `9bc82a17b203d43aa770a19d573bdb197797cdeb3ab49cc11e2c2f5a7ac7a4c8`.
   Rebuild with `packaging/build_extension.ps1` (or `packaging/build_extension.py`)
   if the code changed, and paste the value it prints. (If it is wrong, the
   catalog's automatic check tells you the right one.)

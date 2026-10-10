@@ -151,9 +151,10 @@ Each `tb_*.py` exposes two things:
 - `SPEC` — the dialog metadata (name, icon, tooltip, fields) plus the toolbar
   entries in `ACTIONS`, so one module can feed several buttons.
 - `build(params, origin)` — the pure geometry, returning
-  `(faces, cap_indices, smooth)`, where `faces` is a list of vertex loops
-  (`QVector3D`, metres), `cap_indices` indexes the flat faces whose rims stay
-  sharp, and `smooth` asks for softened seams.
+  `(faces, cap_indices, smooth)`, where `faces` is a list of faces — a vertex
+  loop (`QVector3D`, metres) or a `(loop, [hole_loops])` pair for a planar
+  face with holes (a tube's annulus) — `cap_indices` indexes the flat faces
+  whose rims stay sharp, and `smooth` asks for softened seams.
 
 To add one: create `tb_mysolid.py`, add its module name on a line of
 `tb_list.txt`, and restart IngeTrazo.
